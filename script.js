@@ -33,12 +33,21 @@ function listChampions() {
   const outputDiv = document.getElementById("loopOutput");
   outputDiv.innerHTML = "<h3>Legendary Champions:</h3>";
 
+  // ✅ forEach loop
   champions.forEach((athlete, index) => {
     outputDiv.innerHTML += `<p>${index + 1}. ${athlete}</p>`;
   });
 
+  // ✅ for loop
   for (let i = 0; i < 3; i++) {
     outputDiv.innerHTML += `<p>🏁 Tip ${i + 1}: Stay focused and train smart!</p>`;
+  }
+
+  // ✅ while loop
+  let j = 0;
+  while (j < 2) {
+    outputDiv.innerHTML += `<p>🔥 Motivation ${j + 1}: Never give up!</p>`;
+    j++;
   }
 }
 
